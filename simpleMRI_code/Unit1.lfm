@@ -1,0 +1,876 @@
+object Form1: TForm1
+  Left = 262
+  Height = 640
+  Top = 125
+  Width = 912
+  Caption = 'SimpleMRI'
+  ClientHeight = 640
+  ClientWidth = 912
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  OnCreate = FormCreate
+  LCLVersion = '2.2.6.0'
+  object Shape2: TShape
+    Left = 8
+    Height = 200
+    Top = 232
+    Width = 600
+    Brush.Style = bsClear
+  end
+  object Bevel1: TBevel
+    Left = 694
+    Height = 349
+    Top = 248
+    Width = 205
+  end
+  object Bevel2: TBevel
+    Left = 8
+    Height = 140
+    Top = 456
+    Width = 329
+  end
+  object ImageADC: TImage
+    Left = 8
+    Height = 200
+    Top = 8
+    Width = 819
+  end
+  object ImageFT: TImage
+    Left = 8
+    Height = 200
+    Top = 232
+    Width = 600
+  end
+  object LabelPhase: TLabel
+    Left = 624
+    Height = 13
+    Top = 224
+    Width = 55
+    Caption = 'Phase Step'
+    ParentColor = False
+  end
+  object Label1: TLabel
+    Left = 448
+    Height = 13
+    Top = 464
+    Width = 60
+    Caption = 'Start Sample'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 520
+    Height = 13
+    Top = 464
+    Width = 57
+    Caption = 'End Sample'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 528
+    Height = 13
+    Top = 504
+    Width = 77
+    Caption = 'Procession F Hz'
+    ParentColor = False
+  end
+  object ImageK: TImage
+    Left = 16
+    Height = 128
+    Top = 464
+    Width = 128
+  end
+  object Image2D: TImage
+    Left = 152
+    Height = 128
+    Top = 464
+    Width = 128
+  end
+  object Label4: TLabel
+    Left = 591
+    Height = 13
+    Top = 464
+    Width = 50
+    Caption = '+-Span Hz'
+    ParentColor = False
+  end
+  object Label5: TLabel
+    Left = 280
+    Height = 13
+    Top = 544
+    Width = 49
+    Caption = 'Brightness'
+    ParentColor = False
+    Visible = False
+  end
+  object Shape1: TShape
+    Left = 8
+    Height = 200
+    Top = 8
+    Width = 819
+    Brush.Style = bsClear
+  end
+  object Shape3: TShape
+    Left = 16
+    Height = 128
+    Top = 464
+    Width = 264
+    Brush.Style = bsClear
+  end
+  object Label6: TLabel
+    Left = 803
+    Height = 37
+    Top = 344
+    Width = 9
+    Caption = '.'
+    Font.Color = clWindowText
+    Font.Height = -32
+    Font.Name = 'MS Sans Serif'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label7: TLabel
+    Left = 867
+    Height = 16
+    Top = 256
+    Width = 18
+    Caption = 'ms'
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    ParentColor = False
+    ParentFont = False
+    Visible = False
+  end
+  object Label8: TLabel
+    Left = 841
+    Height = 16
+    Top = 288
+    Width = 18
+    Caption = 'ms'
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label9: TLabel
+    Left = 841
+    Height = 16
+    Top = 320
+    Width = 18
+    Caption = 'ms'
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label10: TLabel
+    Left = 849
+    Height = 16
+    Top = 352
+    Width = 22
+    Caption = 'sec'
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label11: TLabel
+    Left = 624
+    Height = 13
+    Top = 272
+    Width = 47
+    Caption = 'DAC Gain'
+    ParentColor = False
+  end
+  object Label12: TLabel
+    Left = 96
+    Height = 13
+    Top = 208
+    Width = 24
+    Caption = '1000'
+    ParentColor = False
+  end
+  object Label13: TLabel
+    Left = 96
+    Height = 13
+    Top = 432
+    Width = 24
+    Caption = '1800'
+    ParentColor = False
+  end
+  object Label14: TLabel
+    Left = 48
+    Height = 13
+    Top = 432
+    Width = 24
+    Caption = '1750'
+    ParentColor = False
+  end
+  object Label15: TLabel
+    Left = 296
+    Height = 13
+    Top = 208
+    Width = 24
+    Caption = '3000'
+    ParentColor = False
+  end
+  object Label16: TLabel
+    Left = 200
+    Height = 13
+    Top = 208
+    Width = 24
+    Caption = '2000'
+    ParentColor = False
+  end
+  object Label19: TLabel
+    Left = 400
+    Height = 13
+    Top = 208
+    Width = 24
+    Caption = '4000'
+    ParentColor = False
+  end
+  object Label20: TLabel
+    Left = 152
+    Height = 13
+    Top = 432
+    Width = 24
+    Caption = '1850'
+    ParentColor = False
+  end
+  object Label21: TLabel
+    Left = 496
+    Height = 13
+    Top = 208
+    Width = 24
+    Caption = '5000'
+    ParentColor = False
+  end
+  object Label22: TLabel
+    Left = 200
+    Height = 13
+    Top = 432
+    Width = 24
+    Caption = '1900'
+    ParentColor = False
+  end
+  object Label23: TLabel
+    Left = 600
+    Height = 13
+    Top = 208
+    Width = 24
+    Caption = '6000'
+    ParentColor = False
+  end
+  object Label24: TLabel
+    Left = 248
+    Height = 13
+    Top = 432
+    Width = 24
+    Caption = '1950'
+    ParentColor = False
+  end
+  object Label25: TLabel
+    Left = 696
+    Height = 13
+    Top = 208
+    Width = 24
+    Caption = '7000'
+    ParentColor = False
+  end
+  object Label26: TLabel
+    Left = 800
+    Height = 13
+    Top = 208
+    Width = 24
+    Caption = '8000'
+    ParentColor = False
+  end
+  object Label27: TLabel
+    Left = 296
+    Height = 13
+    Top = 432
+    Width = 24
+    Caption = '2000'
+    ParentColor = False
+  end
+  object Label28: TLabel
+    Left = 352
+    Height = 13
+    Top = 432
+    Width = 24
+    Caption = '2050'
+    ParentColor = False
+  end
+  object Label29: TLabel
+    Left = 400
+    Height = 13
+    Top = 432
+    Width = 24
+    Caption = '2100'
+    ParentColor = False
+  end
+  object Label30: TLabel
+    Left = 448
+    Height = 13
+    Top = 432
+    Width = 24
+    Caption = '2150'
+    ParentColor = False
+  end
+  object Label31: TLabel
+    Left = 496
+    Height = 13
+    Top = 432
+    Width = 24
+    Caption = '2200'
+    ParentColor = False
+  end
+  object Label32: TLabel
+    Left = 544
+    Height = 13
+    Top = 432
+    Width = 24
+    Caption = '2250'
+    ParentColor = False
+  end
+  object dactrimtext: TLabel
+    Left = 624
+    Height = 13
+    Top = 312
+    Width = 45
+    Caption = 'DAC Trim'
+    ParentColor = False
+  end
+  object OpenCom: TButton
+    Left = 699
+    Height = 25
+    Top = 560
+    Width = 65
+    Caption = 'OpenCom'
+    OnClick = OpenComClick
+    TabOrder = 0
+  end
+  object SpinCom: TSpinEdit
+    Left = 776
+    Height = 21
+    Top = 560
+    Width = 41
+    Color = clRed
+    MaxValue = 20
+    MinValue = 1
+    OnChange = SpinComChange
+    TabOrder = 1
+    Value = 7
+  end
+  object ButtonFT: TButton
+    Left = 360
+    Height = 25
+    Top = 476
+    Width = 65
+    Caption = 'Fourier Xfrm'
+    OnClick = ButtonFTClick
+    TabOrder = 2
+  end
+  object SpinSample: TSpinEdit
+    Left = 624
+    Height = 21
+    Top = 240
+    Width = 57
+    MaxValue = 33
+    MinValue = 1
+    OnChange = SpinSampleChange
+    TabOrder = 3
+    Value = 17
+  end
+  object SpinStart: TSpinEdit
+    Left = 448
+    Height = 21
+    Top = 480
+    Width = 65
+    MaxValue = 9999
+    MinValue = 1
+    TabOrder = 4
+    Value = 500
+  end
+  object SpinStop: TSpinEdit
+    Left = 520
+    Height = 21
+    Top = 480
+    Width = 65
+    MaxValue = 16384
+    MinValue = 1
+    TabOrder = 5
+    Value = 6000
+  end
+  object Redraw: TButton
+    Left = 832
+    Height = 25
+    Top = 144
+    Width = 49
+    Caption = 'Redraw'
+    OnClick = RedrawClick
+    TabOrder = 6
+  end
+  object Draw: TButton
+    Left = 616
+    Height = 25
+    Top = 368
+    Width = 57
+    Caption = 'ReDraw'
+    OnClick = DrawClick
+    TabOrder = 7
+  end
+  object Button2D: TButton
+    Left = 288
+    Height = 33
+    Top = 504
+    Width = 41
+    Caption = '2D'
+    OnClick = Button2DClick
+    TabOrder = 8
+  end
+  object SpinFreq: TSpinEdit
+    Left = 528
+    Height = 21
+    Top = 520
+    Width = 73
+    MaxValue = 2250
+    MinValue = 1750
+    TabOrder = 9
+    Value = 1900
+  end
+  object OpenData: TButton
+    Left = 834
+    Height = 25
+    Top = 16
+    Width = 65
+    Caption = 'Open File'
+    OnClick = OpenDataClick
+    TabOrder = 10
+  end
+  object SpinSpan: TSpinEdit
+    Left = 593
+    Height = 21
+    Top = 480
+    Width = 57
+    MaxValue = 300
+    MinValue = 16
+    TabOrder = 11
+    Value = 300
+  end
+  object Button1: TButton
+    Left = 288
+    Height = 33
+    Top = 464
+    Width = 41
+    Caption = 'FT32'
+    OnClick = Button1Click
+    TabOrder = 12
+  end
+  object SaveData: TButton
+    Left = 835
+    Height = 25
+    Top = 56
+    Width = 65
+    Caption = 'Save File'
+    OnClick = SaveDataClick
+    TabOrder = 13
+  end
+  object BacqDelay: TButton
+    Left = 699
+    Height = 25
+    Top = 256
+    Width = 65
+    Caption = '+Ph Pulse'
+    OnClick = BacqDelayClick
+    TabOrder = 14
+  end
+  object RelaySettle: TButton
+    Left = 699
+    Height = 25
+    Top = 288
+    Width = 65
+    Caption = 'RelaySettle'
+    OnClick = RelaySettleClick
+    TabOrder = 15
+  end
+  object PolOffRy: TButton
+    Left = 699
+    Height = 25
+    Top = 320
+    Width = 65
+    Caption = 'Pol Ramp'
+    OnClick = PolOffRyClick
+    TabOrder = 16
+  end
+  object Polarization: TButton
+    Left = 699
+    Height = 25
+    Top = 352
+    Width = 65
+    Caption = 'Polarization'
+    OnClick = PolarizationClick
+    TabOrder = 17
+  end
+  object BDhun: TSpinEdit
+    Left = 771
+    Height = 21
+    Top = 256
+    Width = 33
+    MaxValue = 9
+    OnChange = BDhunChange
+    TabOrder = 18
+    Value = 1
+  end
+  object BDten: TSpinEdit
+    Left = 803
+    Height = 21
+    Top = 256
+    Width = 33
+    MaxValue = 9
+    TabOrder = 19
+    Value = 5
+  end
+  object BDone: TSpinEdit
+    Left = 835
+    Height = 21
+    Top = 256
+    Width = 33
+    MaxValue = 9
+    TabOrder = 20
+  end
+  object RSten: TSpinEdit
+    Left = 771
+    Height = 21
+    Top = 288
+    Width = 33
+    MaxValue = 9
+    TabOrder = 21
+  end
+  object RSone: TSpinEdit
+    Left = 803
+    Height = 21
+    Top = 288
+    Width = 33
+    MaxValue = 9
+    TabOrder = 22
+    Value = 5
+  end
+  object PORten: TSpinEdit
+    Left = 771
+    Height = 21
+    Top = 320
+    Width = 33
+    MaxValue = 9
+    TabOrder = 23
+    Value = 3
+  end
+  object PORone: TSpinEdit
+    Left = 803
+    Height = 21
+    Top = 320
+    Width = 33
+    MaxValue = 9
+    MinValue = 1
+    TabOrder = 24
+    Value = 5
+  end
+  object POLthou: TSpinEdit
+    Left = 771
+    Height = 21
+    Top = 352
+    Width = 33
+    MaxValue = 9
+    TabOrder = 25
+    Value = 3
+  end
+  object POLhun: TSpinEdit
+    Left = 811
+    Height = 21
+    Top = 352
+    Width = 33
+    MaxValue = 9
+    TabOrder = 26
+  end
+  object RunTest: TButton
+    Left = 699
+    Height = 25
+    Top = 383
+    Width = 65
+    Caption = 'Run Test'
+    OnClick = RunTestClick
+    TabOrder = 27
+  end
+  object RunXY: TButton
+    Left = 808
+    Height = 25
+    Top = 382
+    Width = 65
+    Caption = 'Run X-Y'
+    OnClick = RunXYClick
+    TabOrder = 28
+  end
+  object dacgain: TSpinEdit
+    Left = 624
+    Height = 21
+    Top = 288
+    Width = 49
+    MaxValue = 8
+    MinValue = 1
+    TabOrder = 29
+    Value = 6
+  end
+  object Gain2: TUpDown
+    Left = 610
+    Height = 33
+    Top = 399
+    Width = 25
+    Max = 5
+    Min = -5
+    OnClick = Gain2Click
+    Position = -4
+    TabOrder = 30
+  end
+  object Gain1: TUpDown
+    Left = 828
+    Height = 33
+    Top = 176
+    Width = 25
+    Max = 5
+    Min = -5
+    OnClick = Gain1Click
+    Position = -2
+    TabOrder = 31
+  end
+  object Bright1: TUpDown
+    Left = 282
+    Height = 33
+    Top = 560
+    Width = 25
+    Min = 1
+    OnClick = Bright1Click
+    Position = 10
+    TabOrder = 32
+  end
+  object dactrim: TSpinEdit
+    Left = 624
+    Height = 21
+    Top = 328
+    Width = 49
+    MaxValue = 20
+    MinValue = -20
+    OnChange = dactrimChange
+    TabOrder = 33
+  end
+  object Labelfmax: TLabel
+    Left = 8
+    Height = 1
+    Top = 232
+    Width = 1
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clYellow
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object LabelFS: TLabel
+    Left = 833
+    Height = 13
+    Top = 216
+    Width = 59
+    Caption = 'FS +-0.824V'
+    ParentColor = False
+    OnClick = LabelFSClick
+  end
+  object ShapeRun: TShape
+    Left = 771
+    Height = 24
+    Top = 383
+    Width = 32
+    Brush.Color = clLime
+    Shape = stCircle
+  end
+  object CheckMagOn: TCheckBox
+    Left = 834
+    Height = 19
+    Top = 120
+    Width = 58
+    Caption = 'Mag On'
+    TabOrder = 34
+  end
+  object CheckBox1: TCheckBox
+    Left = 816
+    Height = 19
+    Top = 416
+    Width = 62
+    Caption = 'Stop X-Y'
+    TabOrder = 35
+  end
+  object deltaF: TFloatSpinEdit
+    Left = 448
+    Height = 21
+    Top = 520
+    Width = 68
+    DecimalPlaces = 1
+    Increment = 0.1
+    MaxValue = 2
+    MinValue = 0.5
+    OnChange = deltaFChange
+    TabOrder = 36
+    Value = 1
+  end
+  object Label17: TLabel
+    Left = 448
+    Height = 13
+    Top = 504
+    Width = 38
+    Caption = 'Step Hz'
+    ParentColor = False
+  end
+  object ButtonPing: TButton
+    Left = 699
+    Height = 25
+    Top = 452
+    Width = 65
+    Caption = 'Ping Coil'
+    OnClick = ButtonPingClick
+    TabOrder = 37
+  end
+  object Spincut: TSpinEdit
+    Left = 389
+    Height = 21
+    Top = 571
+    Width = 51
+    MaxValue = 2200
+    MinValue = 1750
+    TabOrder = 38
+    Value = 1750
+  end
+  object SpinLength: TSpinEdit
+    Left = 392
+    Height = 21
+    Top = 600
+    Width = 48
+    MaxValue = 10
+    MinValue = 1
+    TabOrder = 39
+    Value = 1
+  end
+  object FloatSpinpct: TFloatSpinEdit
+    Left = 512
+    Height = 21
+    Top = 600
+    Width = 45
+    Increment = 0.1
+    MaxValue = 1
+    MinValue = 0.1
+    TabOrder = 40
+    Value = 0.5
+  end
+  object Button2: TButton
+    Left = 701
+    Height = 25
+    Top = 486
+    Width = 63
+    Caption = 'Noise'
+    OnClick = Button2Click
+    TabOrder = 41
+  end
+  object Button3: TButton
+    Left = 795
+    Height = 25
+    Top = 486
+    Width = 88
+    Caption = 'Test Grad Coils'
+    OnClick = Button3Click
+    TabOrder = 42
+  end
+  object Button4: TButton
+    Left = 795
+    Height = 25
+    Top = 452
+    Width = 83
+    Caption = 'Set Phase Grad'
+    OnClick = Button4Click
+    TabOrder = 43
+  end
+  object Label18: TLabel
+    Left = 445
+    Height = 13
+    Top = 571
+    Width = 107
+    Caption = 'Notch Start Frequency'
+    ParentColor = False
+  end
+  object Label33: TLabel
+    Left = 445
+    Height = 13
+    Top = 600
+    Width = 60
+    Caption = 'Notch Width'
+    ParentColor = False
+  end
+  object Label34: TLabel
+    Left = 560
+    Height = 13
+    Top = 600
+    Width = 69
+    Caption = 'Notch Percent'
+    ParentColor = False
+  end
+  object Labelzg: TLabel
+    Left = 312
+    Height = 13
+    Top = 566
+    Width = 12
+    Caption = '10'
+    ParentColor = False
+  end
+  object Labelzft: TLabel
+    Left = 642
+    Height = 13
+    Top = 407
+    Width = 33
+    Caption = '0.0625'
+    ParentColor = False
+  end
+  object OpenDialog1: TOpenDialog
+    Filter = 'nmr data (*.txt)|*.txt'
+    Left = 232
+    Top = 592
+  end
+  object SaveDialog1: TSaveDialog
+    Filter = 'nmr data (*.txt)|*.txt'
+    Left = 152
+    Top = 592
+  end
+  object Timer1: TTimer
+    Interval = 15
+    OnTimer = Timer1Timer
+    Left = 96
+    Top = 592
+  end
+  object Timer2: TTimer
+    Enabled = False
+    Interval = 15000
+    OnTimer = Timer2Timer
+    Left = 48
+    Top = 592
+  end
+  object Timer3: TTimer
+    Enabled = False
+    OnTimer = Timer3Timer
+    Left = 360
+    Top = 512
+  end
+end
