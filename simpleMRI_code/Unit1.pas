@@ -215,7 +215,7 @@ const
    dw :dword;
    comhand: thandle;
    a : longbool;
-   a2 : bool;
+   a2 : longbool;
    FileName : string;
    bchar : char;
    k : dword;
@@ -273,7 +273,7 @@ const
    if portnum = 19 then FileName := '\\.\COM19';
    if portnum = 20 then FileName := '\\.\COM20';
 
-   //FileName := '/dev/ttyACM0';                     //for pi3, only ttyACM0 is used
+   FileName := '/dev/ttyACM0';                     //for pi3, only ttyACM0 is used
 
    comhand := Serial.SerOpen(FileName);    //Open ComX for input-output mode
    opencomport := -1;                                 //If open works, return all ones
@@ -667,7 +667,8 @@ begin
   SpinCom.Color := ClLime;
   transmitcombyte(13);
   sleep(25);
- end; 
+ end;
+ timer1.Enabled:=true;
 end;
 procedure doPing;
 begin
