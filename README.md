@@ -12,5 +12,5 @@ are supplied that can be loaded and processed with the supplied
 user interface.
 
 Note: For the Polarizer board, use the updated Profile_polarizer_e2.gcode
-file. This corrects the unused relay pin which is open, not grounde.
+file. This corrects the unused relay pin which is open, not grounded.
 ![](./vert_new_cir.png)
